@@ -9,13 +9,15 @@
 	<LangVersion>9.0</LangVersion>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/atc-net/atc-options</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/atc-net/atc-options</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/atc-net/atc-azure-options</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/atc-net/atc-azure-options</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<NeutralLanguage>en</NeutralLanguage>
-	<PackageTags>options;Keyvault;Cosmos;StorageAccount;Serialization</PackageTags>
+	<PackageTags>options;Azure;Keyvault;Cosmos;StorageAccount;Serialization</PackageTags>
 	<Authors>atc-net</Authors>
 	<Description>Library for common settings</Description>
+	<Product>Atc.Azure.Options</Product>
+	<PackageId>Atc.Azure.Options</PackageId>
 </PropertyGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace Atc.Options.Environment
+﻿namespace Atc.Azure.Options.Environment
 {
     public enum EnvironmentType
     {

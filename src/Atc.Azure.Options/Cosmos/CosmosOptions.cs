@@ -1,6 +1,6 @@
-﻿using Atc.Options.Environment;
+﻿using Atc.Azure.Options.Environment;
 
-namespace Atc.Options.Cosmos
+namespace Atc.Azure.Options.Cosmos
 {
     public class CosmosOptions : EnvironmentOptions
     {

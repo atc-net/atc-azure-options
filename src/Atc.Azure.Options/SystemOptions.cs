@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Atc.Options
+namespace Atc.Azure.Options
 {
     public class SystemOptions
     {

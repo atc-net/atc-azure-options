@@ -1,4 +1,6 @@
-﻿namespace Atc.Options.Environment
+﻿using Atc.Azure.Options.Environment;
+
+namespace Atc.Azure.Options.Extensions
 {
     public static class EnvironmentOptionsExtensions
     {

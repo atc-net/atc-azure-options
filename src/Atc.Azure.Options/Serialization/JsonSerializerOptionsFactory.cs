@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Atc.Options.Serialization
+namespace Atc.Azure.Options.Serialization
 {
     public static class JsonSerializerOptionsFactory
     {

@@ -1,4 +1,4 @@
-﻿namespace Atc.Options.StorageAccount
+﻿namespace Atc.Azure.Options.StorageAccount
 {
     public class StorageAccountOptions
     {

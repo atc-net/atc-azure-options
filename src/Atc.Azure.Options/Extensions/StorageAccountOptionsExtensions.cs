@@ -1,7 +1,7 @@
-﻿using Atc.Options.Environment;
-using Atc.Options.StorageAccount;
+﻿using Atc.Azure.Options.Environment;
+using Atc.Azure.Options.StorageAccount;
 
-namespace Atc.Options.Extensions
+namespace Atc.Azure.Options.Extensions
 {
     public static class StorageAccountOptionsExtensions
     {

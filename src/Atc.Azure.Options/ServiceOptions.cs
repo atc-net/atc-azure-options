@@ -1,7 +1,7 @@
 ﻿using System;
-using Atc.Options.Cosmos;
+using Atc.Azure.Options.Cosmos;
 
-namespace Atc.Options
+namespace Atc.Azure.Options
 {
     public class ServiceOptions : CosmosOptions
     {
