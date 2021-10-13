@@ -492,3 +492,4 @@ dotnet_diagnostic.S1135.severity = suggestion       # https://github.com/atc-net
 dotnet_diagnostic.CA1062.severity = none            # Do not demand null-checking when using nullable reference types.
 dotnet_diagnostic.CA1014.severity = none            # No need for CLSCompliantAttribute
 dotnet_diagnostic.SA1011.severity = none            # Space needed after closing square bracet "]" needed for nullable arrays
+dotnet_diagnostic.SA1401.severity = none			# Field should be private
