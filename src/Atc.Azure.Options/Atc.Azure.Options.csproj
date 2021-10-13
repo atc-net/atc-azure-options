@@ -2,23 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageId>Atc.Azure.Options</PackageId>
+    <PackageTags>options;Azure;Keyvault;Cosmos;StorageAccount;Serialization</PackageTags>
+	  <Description>Library for common settings</Description>
   </PropertyGroup>
-
-<PropertyGroup>
-	<Nullable>enable</Nullable>
-	<LangVersion>9.0</LangVersion>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/atc-net/atc-azure-options</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/atc-net/atc-azure-options</RepositoryUrl>
-	<RepositoryType>git</RepositoryType>
-	<NeutralLanguage>en</NeutralLanguage>
-	<PackageTags>options;Azure;Keyvault;Cosmos;StorageAccount;Serialization</PackageTags>
-	<Authors>atc-net</Authors>
-	<Description>Library for common settings</Description>
-	<Product>Atc.Azure.Options</Product>
-	<PackageId>Atc.Azure.Options</PackageId>
-</PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.6.2" />
