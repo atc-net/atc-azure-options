@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Azure.KeyVault;
 using Microsoft.Azure.Services.AppAuthentication;
@@ -11,6 +12,11 @@ namespace Atc.Azure.Options.Extensions
         [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "The AKV provider will dispose of any objects that it creates on its own.")]
         public static void ConfigureKeyVaultForApi(this IConfigurationBuilder config, string configurationSectionName)
         {
+            if (configurationSectionName == null)
+            {
+                throw new ArgumentNullException(nameof(configurationSectionName));
+            }
+
             var buildConfig = config.Build();
             var serviceOptions = new ServiceOptions();
             buildConfig.Bind(configurationSectionName, serviceOptions);
