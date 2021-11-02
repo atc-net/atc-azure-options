@@ -23,7 +23,7 @@ namespace Atc.Azure.Options.Extensions
 
             var tokenProvider = new AzureServiceTokenProvider();
             var keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(tokenProvider.KeyVaultTokenCallback));
-            config.AddAzureKeyVault(serviceOptions.GetKeyVault(), keyVaultClient, new DefaultKeyVaultSecretManager());
+            config.AddAzureKeyVault(serviceOptions.EnvironmentOptions.GetKeyVault(serviceOptions.NamingOptions), keyVaultClient, new DefaultKeyVaultSecretManager());
         }
     }
 }

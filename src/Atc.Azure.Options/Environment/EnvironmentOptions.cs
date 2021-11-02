@@ -1,6 +1,6 @@
-﻿namespace Atc.Azure.Options.Environment
+namespace Atc.Azure.Options.Environment
 {
-    public class EnvironmentOptions : SystemOptions
+    public class EnvironmentOptions
     {
         public EnvironmentType EnvironmentType { get; set; }
 
