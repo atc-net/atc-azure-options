@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Atc.Azure.Options.Environment;
+using Atc.Azure.Options.Providers;
 using Microsoft.Azure.KeyVault;
 using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +13,7 @@ namespace Atc.Azure.Options.Extensions
         [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "The AKV provider will dispose of any objects that it creates on its own.")]
         public static void ConfigureKeyVaultForApi(
             this IConfigurationBuilder config,
+            INamingProvider namingProvider,
             string environmentOptionsSectionName = nameof(EnvironmentOptions),
             string namingOptionsSectionName = nameof(NamingOptions))
         {
@@ -25,7 +27,7 @@ namespace Atc.Azure.Options.Extensions
 
             var tokenProvider = new AzureServiceTokenProvider();
             var keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(tokenProvider.KeyVaultTokenCallback));
-            config.AddAzureKeyVault(environmentOptions.GetKeyVault(namingOptions), keyVaultClient, new DefaultKeyVaultSecretManager());
+            config.AddAzureKeyVault(environmentOptions.GetKeyVault(namingOptions, namingProvider), keyVaultClient, new DefaultKeyVaultSecretManager());
         }
     }
 }

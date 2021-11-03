@@ -1,5 +1,6 @@
 using Atc.Azure.Options.Cosmos;
 using Atc.Azure.Options.Environment;
+using Atc.Azure.Options.Providers;
 
 namespace Atc.Azure.Options.Extensions
 {
@@ -12,9 +13,9 @@ namespace Atc.Azure.Options.Extensions
                 ? LocalAccountAuthKey
                 : options.CosmosDbKey;
 
-        public static string GetCosmosDbEndpoint(this CosmosOptions options, EnvironmentOptions environmentOptions, NamingOptions namingOptions)
+        public static string GetCosmosDbEndpoint(this CosmosOptions options, EnvironmentOptions environmentOptions, NamingOptions namingOptions, INamingProvider namingProvider)
             => environmentOptions.EnvironmentType == EnvironmentType.Local
                 ? "https://localhost:8081"
-                : $"https://{environmentOptions.GetResourceName(namingOptions)}.documents.azure.com:443/";
+                : $"https://{namingProvider.GetResourceName(environmentOptions, namingOptions)}.documents.azure.com:443/";
     }
 }
