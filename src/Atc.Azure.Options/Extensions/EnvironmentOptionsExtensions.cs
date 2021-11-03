@@ -8,6 +8,10 @@ namespace Atc.Azure.Options.Extensions
             => $"https://{options.GetResourceName(namingOptions)}.vault.azure.net";
 
         public static string GetResourceName(this EnvironmentOptions options, NamingOptions namingOptions)
-            => string.Concat(namingOptions.CompanyAbbreviation, namingOptions.SystemAbbreviation, options.EnvironmentName, namingOptions.ServiceAbbreviation);
+            => string.Concat(
+                namingOptions.CompanyAbbreviation,
+                namingOptions.SystemAbbreviation,
+                options.EnvironmentName,
+                namingOptions.ServiceAbbreviation);
     }
 }
