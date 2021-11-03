@@ -1,6 +1,6 @@
 namespace Atc.Azure.Options
 {
-    public class SystemOptions
+    public class NamingOptions
     {
         public string SystemAbbreviation { get; set; } = string.Empty;
 

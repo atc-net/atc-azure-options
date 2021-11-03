@@ -1,8 +1,9 @@
-using Atc.Azure.Options.Cosmos;
-
 namespace Atc.Azure.Options
 {
-    public class ServiceOptions : CosmosOptions
+    /// <summary>
+    /// This implementation of ServiceOptions is a minimal approach made partial that project implementations to extend.
+    /// </summary>
+    public partial class ServiceOptions
     {
         public string ApplicationInsightsInstrumentationKey { get; set; } = string.Empty;
     }

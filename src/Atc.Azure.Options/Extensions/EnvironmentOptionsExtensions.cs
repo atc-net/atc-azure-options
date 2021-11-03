@@ -1,13 +1,11 @@
-﻿using Atc.Azure.Options.Environment;
+using Atc.Azure.Options.Environment;
+using Atc.Azure.Options.Providers;
 
 namespace Atc.Azure.Options.Extensions
 {
     public static class EnvironmentOptionsExtensions
     {
-        public static string GetKeyVault(this EnvironmentOptions options)
-            => $"https://{options.GetResourceName()}.vault.azure.net";
-
-        public static string GetResourceName(this EnvironmentOptions options)
-            => string.Concat(options.CompanyAbbreviation, options.SystemAbbreviation, options.EnvironmentName, options.ServiceAbbreviation);
+        public static string GetKeyVault(this EnvironmentOptions options, NamingOptions namingOptions, INamingProvider namingProvider)
+            => $"https://{namingProvider.GetResourceName(options, namingOptions)}.vault.azure.net";
     }
 }
