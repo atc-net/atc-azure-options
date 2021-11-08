@@ -13,6 +13,9 @@ namespace Atc.Azure.Options.Extensions
                 ? LocalAccountAuthKey
                 : options.CosmosDbKey;
 
+        public static string GetCosmosDbEndpoint(this CosmosOptions options, EnvironmentOptions environmentOptions, NamingOptions namingOptions)
+            => GetCosmosDbEndpoint(options, environmentOptions, namingOptions, new NamingProvider());
+
         public static string GetCosmosDbEndpoint(this CosmosOptions options, EnvironmentOptions environmentOptions, NamingOptions namingOptions, INamingProvider namingProvider)
             => environmentOptions.EnvironmentType == EnvironmentType.Local
                 ? "https://localhost:8081"
