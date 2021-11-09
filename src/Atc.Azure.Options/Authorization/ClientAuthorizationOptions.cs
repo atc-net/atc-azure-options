@@ -1,4 +1,4 @@
-namespace Atc.Azure.Options.Autorization
+namespace Atc.Azure.Options.Authorization
 {
     public class ClientAuthorizationOptions
     {
