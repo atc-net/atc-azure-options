@@ -10,11 +10,11 @@ namespace Atc.Azure.Options.Extensions
 {
     public static class ConfigurationExtensions
     {
-        public static void ConfigureKeyVaultForApi(this IConfigurationBuilder config)
-            => ConfigureKeyVaultForApi(config, new NamingProvider());
+        public static void ConfigureKeyVault(this IConfigurationBuilder config)
+            => ConfigureKeyVault(config, new NamingProvider());
 
         [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "The AKV provider will dispose of any objects that it creates on its own.")]
-        public static void ConfigureKeyVaultForApi(
+        public static void ConfigureKeyVault(
             this IConfigurationBuilder config,
             INamingProvider namingProvider,
             string environmentOptionsSectionName = nameof(EnvironmentOptions),
