@@ -5,7 +5,7 @@ namespace Atc.Azure.Options.Providers
     public class NamingProvider : INamingProvider
     {
         public string GetResourceName(EnvironmentOptions options, NamingOptions namingOptions)
-            => GetResourceName(options, namingOptions, suffix: string.Empty);
+            => GetResourceName(options, namingOptions, string.Empty);
 
         public string GetResourceName(EnvironmentOptions options, NamingOptions namingOptions, string suffix)
             => string.Concat(
