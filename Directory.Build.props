@@ -40,8 +40,6 @@
   <!-- Shared code analyzers used for all projects in the solution -->
   <ItemGroup Label="Code Analyzers">
     <PackageReference Update="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0" />
-    <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
-    <PackageReference Update="Nerdbank.GitVersioning" Version="3.4.255" />
     <PackageReference Update="SecurityCodeScan.VS2019" Version="5.6.0" />
     <PackageReference Update="SonarAnalyzer.CSharp" Version="8.34.0.42011" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.321" PrivateAssets="All" />
