@@ -5,8 +5,9 @@
 ![](https://img.shields.io/static/v1?color=ff9900&style=for-the-badge&label=&message=Breaking%20changes%20From%20Version%201.x%20to%202.x)
 
 ```
-    ConfigureKeyVault now requires a parameter of type DefaultAzureCredentialOptions.
-    public static void ConfigureKeyVault(this IConfigurationBuilder config, DefaultAzureCredentialOptions defaultAzureCredentialOptions)
+    ConfigureKeyVault now requires a parameter of type DefaultAzureCredentialOptions:
+
+    void ConfigureKeyVault(this IConfigurationBuilder config, DefaultAzureCredentialOptions defaultAzureCredentialOptions)
  ```
 
 # ATC Azure Options
