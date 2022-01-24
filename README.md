@@ -1,4 +1,4 @@
-[![NuGet Version](https://img.shields.io/nuget/v/atc-azure-options.svg?logo=nuget&style=for-the-badge)](https://www.nuget.org/profiles/atc-net)
+[![NuGet Version](https://img.shields.io/nuget/v/atc.azure.options.svg?logo=nuget&style=for-the-badge)](https://www.nuget.org/packages/atc.azure.options)
 
 ## Breaking changes
 
