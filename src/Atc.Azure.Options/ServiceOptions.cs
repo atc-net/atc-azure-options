@@ -6,5 +6,7 @@ namespace Atc.Azure.Options
     public partial class ServiceOptions
     {
         public string ApplicationInsightsInstrumentationKey { get; set; } = string.Empty;
+
+        public string TenantId { get; set; } = string.Empty;
     }
 }
