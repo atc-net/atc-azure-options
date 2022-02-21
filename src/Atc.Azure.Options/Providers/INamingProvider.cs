@@ -1,11 +1,8 @@
-using Atc.Azure.Options.Environment;
+namespace Atc.Azure.Options.Providers;
 
-namespace Atc.Azure.Options.Providers
+public interface INamingProvider
 {
-    public interface INamingProvider
-    {
-        string GetResourceName(EnvironmentOptions options, NamingOptions namingOptions);
+    string GetResourceName(EnvironmentOptions options, NamingOptions namingOptions);
 
-        string GetResourceName(EnvironmentOptions options, NamingOptions namingOptions, string suffix);
-    }
+    string GetResourceName(EnvironmentOptions options, NamingOptions namingOptions, string suffix);
 }
