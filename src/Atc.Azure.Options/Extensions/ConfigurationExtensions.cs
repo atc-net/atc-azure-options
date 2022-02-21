@@ -1,34 +1,29 @@
-using System;
-using Atc.Azure.Options.Environment;
-using Atc.Azure.Options.Providers;
-using Azure.Identity;
-using Microsoft.Extensions.Configuration;
+namespace Atc.Azure.Options.Extensions;
 
-namespace Atc.Azure.Options.Extensions
+public static class ConfigurationExtensions
 {
-    public static class ConfigurationExtensions
+    public static IConfigurationBuilder ConfigureKeyVault(this IConfigurationBuilder config, DefaultAzureCredentialOptions defaultAzureCredentialOptions)
+        => ConfigureKeyVault(config, defaultAzureCredentialOptions, new NamingProvider());
+
+    public static IConfigurationBuilder ConfigureKeyVault(
+        this IConfigurationBuilder config,
+        DefaultAzureCredentialOptions defaultAzureCredentialOptions,
+        INamingProvider namingProvider,
+        string environmentOptionsSectionName = nameof(EnvironmentOptions),
+        string namingOptionsSectionName = nameof(NamingOptions))
     {
-        public static void ConfigureKeyVault(this IConfigurationBuilder config, DefaultAzureCredentialOptions defaultAzureCredentialOptions)
-            => ConfigureKeyVault(config, defaultAzureCredentialOptions, new NamingProvider());
+        var buildConfig = config.Build();
 
-        public static void ConfigureKeyVault(
-            this IConfigurationBuilder config,
-            DefaultAzureCredentialOptions defaultAzureCredentialOptions,
-            INamingProvider namingProvider,
-            string environmentOptionsSectionName = nameof(EnvironmentOptions),
-            string namingOptionsSectionName = nameof(NamingOptions))
-        {
-            var buildConfig = config.Build();
+        var environmentOptions = new EnvironmentOptions();
+        buildConfig.Bind(environmentOptionsSectionName, environmentOptions);
 
-            var environmentOptions = new EnvironmentOptions();
-            buildConfig.Bind(environmentOptionsSectionName, environmentOptions);
+        var namingOptions = new NamingOptions();
+        buildConfig.Bind(namingOptionsSectionName, namingOptions);
 
-            var namingOptions = new NamingOptions();
-            buildConfig.Bind(namingOptionsSectionName, namingOptions);
+        config.AddAzureKeyVault(
+            new Uri(environmentOptions.GetKeyVault(namingOptions, namingProvider)),
+            new DefaultAzureCredential(defaultAzureCredentialOptions));
 
-            config.AddAzureKeyVault(
-                new Uri(environmentOptions.GetKeyVault(namingOptions, namingProvider)),
-                new DefaultAzureCredential(defaultAzureCredentialOptions));
-        }
+        return config;
     }
 }

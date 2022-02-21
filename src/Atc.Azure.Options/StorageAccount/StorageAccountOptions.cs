@@ -1,9 +1,8 @@
-namespace Atc.Azure.Options.StorageAccount
-{
-    public class StorageAccountOptions
-    {
-        public string StorageConnectionString { get; set; } = string.Empty;
+namespace Atc.Azure.Options.StorageAccount;
 
-        public string StorageContainerName { get; set; } = string.Empty;
-    }
+public class StorageAccountOptions
+{
+    public string StorageConnectionString { get; set; } = string.Empty;
+
+    public string StorageContainerName { get; set; } = string.Empty;
 }

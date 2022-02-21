@@ -1,9 +1,8 @@
-namespace Atc.Azure.Options.EventHub
-{
-    public class EventHubOptions
-    {
-        public string EventHubName { get; set; } = string.Empty;
+namespace Atc.Azure.Options.EventHub;
 
-        public string EventHubConnection { get; set; } = string.Empty;
-    }
+public class EventHubOptions
+{
+    public string EventHubName { get; set; } = string.Empty;
+
+    public string EventHubConnection { get; set; } = string.Empty;
 }

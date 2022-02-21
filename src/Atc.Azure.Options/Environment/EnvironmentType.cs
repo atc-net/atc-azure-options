@@ -1,9 +1,8 @@
-﻿namespace Atc.Azure.Options.Environment
+namespace Atc.Azure.Options.Environment;
+
+public enum EnvironmentType
 {
-    public enum EnvironmentType
-    {
-        DevTest,
-        Production,
-        Local,
-    }
+    DevTest,
+    Production,
+    Local,
 }
