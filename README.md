@@ -5,10 +5,22 @@
 ![](https://img.shields.io/static/v1?color=ff9900&style=for-the-badge&label=&message=Breaking%20changes%20From%20Version%201.x%20to%202.x)
 
 ```
-    ConfigureKeyVault now requires a parameter of type DefaultAzureCredentialOptions:
+    - ConfigureKeyVault now requires a parameter of type DefaultAzureCredentialOptions:
 
-    void ConfigureKeyVault(this IConfigurationBuilder config, DefaultAzureCredentialOptions defaultAzureCredentialOptions)
+    - void ConfigureKeyVault(this IConfigurationBuilder config, DefaultAzureCredentialOptions defaultAzureCredentialOptions)
  ```
+
+ ![](https://img.shields.io/static/v1?color=ff9900&style=for-the-badge&label=&message=Breaking%20changes%20From%20Version%202.x%20to%203.x)
+
+```
+    - StorageAccountOptions
+       - StorageConnectionString renamed to ConnectionString
+       - StorageContainerName renamed to ContainerName
+
+    - EventHubOptions
+       - EventHubName renamed to Name
+       - EventHubConnection renamed to ConnectionString
+```
 
 # ATC Azure Options
 
