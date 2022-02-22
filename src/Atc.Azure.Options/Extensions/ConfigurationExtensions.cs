@@ -2,8 +2,13 @@ namespace Atc.Azure.Options.Extensions;
 
 public static class ConfigurationExtensions
 {
-    public static IConfigurationBuilder ConfigureKeyVault(this IConfigurationBuilder config, DefaultAzureCredentialOptions defaultAzureCredentialOptions)
-        => ConfigureKeyVault(config, defaultAzureCredentialOptions, new NamingProvider());
+    public static IConfigurationBuilder ConfigureKeyVault(
+        this IConfigurationBuilder config,
+        DefaultAzureCredentialOptions defaultAzureCredentialOptions)
+        => ConfigureKeyVault(
+            config,
+            defaultAzureCredentialOptions,
+            new NamingProvider());
 
     public static IConfigurationBuilder ConfigureKeyVault(
         this IConfigurationBuilder config,
