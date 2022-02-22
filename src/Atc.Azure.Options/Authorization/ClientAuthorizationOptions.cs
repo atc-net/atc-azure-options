@@ -13,4 +13,7 @@ public class ClientAuthorizationOptions
     public string ClientSecret { get; set; } = string.Empty;
 
     public string? ClientBaseAddress { get; set; }
+
+    public override string ToString()
+        => $"{nameof(TenantId)}: {TenantId}, {nameof(Instance)}: {Instance}, {nameof(ClientId)}: {ClientId}, {nameof(Audience)}: {Audience}, {nameof(ClientSecret)}: {ClientSecret}, {nameof(ClientBaseAddress)}: {ClientBaseAddress}";
 }

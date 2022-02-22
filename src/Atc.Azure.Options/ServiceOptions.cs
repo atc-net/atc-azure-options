@@ -8,4 +8,7 @@ public partial class ServiceOptions
     public string ApplicationInsightsInstrumentationKey { get; set; } = string.Empty;
 
     public string TenantId { get; set; } = string.Empty;
+
+    public override string ToString()
+        => $"{nameof(ApplicationInsightsInstrumentationKey)}: {ApplicationInsightsInstrumentationKey}, {nameof(TenantId)}: {TenantId}";
 }
