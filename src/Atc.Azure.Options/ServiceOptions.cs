@@ -7,7 +7,7 @@ public partial class ServiceOptions
 {
     public string ApplicationInsightsConnectionString { get; set; } = string.Empty;
 
-    [Obsolete("ApplicationInsightsConnectionString should be used instead")]
+    [Obsolete("ApplicationInsightsConnectionString should be used instead - see https://docs.microsoft.com/en-us/azure/azure-monitor/app/sdk-connection-string?tabs=net")]
     public string ApplicationInsightsInstrumentationKey { get; set; } = string.Empty;
 
     public string TenantId { get; set; } = string.Empty;
