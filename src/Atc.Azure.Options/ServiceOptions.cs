@@ -5,10 +5,13 @@ namespace Atc.Azure.Options;
 /// </summary>
 public partial class ServiceOptions
 {
+    public string ApplicationInsightsConnectionString { get; set; } = string.Empty;
+
+    [Obsolete("ApplicationInsightsConnectionString should be used instead - see https://docs.microsoft.com/en-us/azure/azure-monitor/app/sdk-connection-string?tabs=net")]
     public string ApplicationInsightsInstrumentationKey { get; set; } = string.Empty;
 
     public string TenantId { get; set; } = string.Empty;
 
     public override string ToString()
-        => $"{nameof(ApplicationInsightsInstrumentationKey)}: {ApplicationInsightsInstrumentationKey}, {nameof(TenantId)}: {TenantId}";
+        => $"{nameof(ApplicationInsightsConnectionString)}: {ApplicationInsightsConnectionString}, {nameof(TenantId)}: {TenantId}";
 }
