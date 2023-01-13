@@ -1,3 +1,4 @@
+global using Atc.Azure.Options.Authorization;
 global using Atc.Azure.Options.Cosmos;
 global using Atc.Azure.Options.Environment;
 global using Atc.Azure.Options.Providers;
