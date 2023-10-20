@@ -16,13 +16,4 @@
     <PackageReference Include="System.Text.Json" Version="7.0.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Update="AsyncFixer" Version="1.6.0" />
-    <PackageReference Update="Asyncify" Version="0.9.5707.38527" />
-    <PackageReference Update="Meziantou.Analyzer" Version="2.0.93" />
-    <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.133" />
-    <PackageReference Update="SecurityCodeScan.VS2019" Version="5.6.7" />
-    <PackageReference Update="SonarAnalyzer.CSharp" Version="9.12.0.78982" />
-  </ItemGroup>
-
 </Project>
