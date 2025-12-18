@@ -10,7 +10,7 @@ public class AzureCredentialOptionsProvider : IAzureCredentialOptionsProvider
     public DefaultAzureCredentialOptions GetAzureCredentialOptions(
         EnvironmentOptions environmentOptions,
         string tenantId)
-        => new DefaultAzureCredentialOptions
+        => new ()
         {
             SharedTokenCacheTenantId = tenantId,
             VisualStudioTenantId = tenantId,
@@ -18,7 +18,6 @@ public class AzureCredentialOptionsProvider : IAzureCredentialOptionsProvider
             ExcludeManagedIdentityCredential = environmentOptions.EnvironmentType == EnvironmentType.Local,
             ExcludeAzurePowerShellCredential = true,
             ExcludeInteractiveBrowserCredential = true,
-            ExcludeSharedTokenCacheCredential = true,
             ExcludeEnvironmentCredential = true,
         };
 }
